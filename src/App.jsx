@@ -2,6 +2,7 @@ import { useState } from 'react'
 import MyButton from './Components/myButton'
 import './App.css'
 import UsersContainer from './Components/Users/UsersContainer'
+import CreateUser from './Components/Users/CreateUser'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Menubar } from 'primereact/menubar'
 
@@ -18,6 +19,7 @@ function App() {
       <Menubar model={items} />
       <Routes>
         <Route path='/usuarios' element={<UsersContainer />} />
+        <Route path='/nuevo-usuario' element={<CreateUser />} />
       </Routes>
       <div className="card">
         <MyButton count={count} setCount={setCount} />
